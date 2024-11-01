@@ -1,0 +1,6 @@
+[[Installing TypeScript]]
+[[Define Types]]
+[[Type Aliasis]]
+[[Function and Function Types]]
+[[Quick intro to Generics]]
+[[Using React and TypeScript]]

@@ -1,0 +1,1 @@
+[[Different Ways of creating object]]

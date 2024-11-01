@@ -1,0 +1,1 @@
+class name can be used as type.
