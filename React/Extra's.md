@@ -1,0 +1,2 @@
+- jsx stands for javascript xml. In react we are writing xml that gets converted into html
+- 
