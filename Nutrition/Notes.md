@@ -1,0 +1,4 @@
+
+Additionally, it’s a good idea to weigh foods in their uncooked state. The amount of time a food is cooked for affects how much moisture it retains. A food with higher water content before cooking weighs more, but it has the same nutrition profile after it is cooked when it weighs less because the water has evaporated from cooking. The opposite is true for foods like dried pasta and rice which weight more after cooking due to an increased water content. Since you won’t always cook foods for the exact same length of time, a good way to ensure consistent measurement and tracking is to weigh foods prior to cooking.
+
+The estimation of caloric intake that would simply keep you at your current body weight is referred to as your maintenance calories. 
