@@ -4,3 +4,6 @@
 [[Function and Function Types]]
 [[Quick intro to Generics]]
 [[Using React and TypeScript]]
+[[Understanding tsconfig file]]
+[[Arrays in typescript]]
+[[Types Vs Interface in ts]]

@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nutrition/Notes.md",
+                "file": "Nutrition/Notes Dopamine Detox.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Notes Dopamine Detox"
+            }
+          },
+          {
+            "id": "d78325606a98e923",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nutrition/Npm link.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Npm link"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +124,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Nutrition/Notes.md",
+            "file": "Nutrition/Npm link.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -163,10 +177,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "af266f6eac604b8a",
+  "active": "d78325606a98e923",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Nutrition/Notes Dopamine Detox.md",
+    "Nutrition/Npm link.md",
     "Nutrition/Notes.md",
+    "Untitled.md",
     "Nutrition",
     "Javascript/Machine coding round/Array Methods/Filter.md",
     "Javascript/Machine coding round/Array Methods/Array Index.md",

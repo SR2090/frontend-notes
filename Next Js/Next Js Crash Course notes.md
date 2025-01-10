@@ -258,3 +258,295 @@ PPR partial pre rendering
 ![[Pasted image 20241112011935.png]]
 
 folder api can have any name but the route file is specific to next.
+![[Pasted image 20241112012019.png]]
+
+![[Pasted image 20241112012030.png]]
+
+
+## Make sure that next auth uses latest version of react and other dependencies
+
+Add the following to package.json
+![[Pasted image 20241115160003.png]]
+Ensures that the latest version of react is being used across all the packages.
+
+```json
+  "packageManager": "npm@10.5.2",
+
+  "overrides":{
+
+    "react": "$react",
+
+    "react-dom": "$react-dom"
+
+  },
+```
+
+
+
+
+
+Cannot use sever action in a client component
+
+![[Pasted image 20241116162053.png]]
+
+
+### Form Action
+
+![[Pasted image 20241116163201.png]]
+
+
+[Form Action](https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-action)
+
+
+```css
+/* Add global css class for reusability in tailwind */
+
+@layer utilties {
+
+  /* This heading will apply the css after the @ directive */
+
+  /* Leading is the space between the characters */
+
+  .heading {
+
+    @apply uppercase bg-black px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[36px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
+
+  }
+
+}
+```
+
+Above shows how we can create utilty classes in global.css to prevent style duplication.
+
+### Shad CN Cli
+![[Pasted image 20241117000656.png]]
+
+#tailwindspecific use ! mark before a style to override a style of an element.
+
+
+### @ in import in next
+is typically an alias for a specific directory in your project. It is commonly used to simplify imports by providing a shorthand for deeply nested directory paths.
+
+### 1. **Alias Configuration**
+
+The `@` alias is often configured in build tools like Webpack, Vite, or frameworks like Next.js. It usually points to the project's root directory (or a specific directory like `src`).
+
+For example:
+
+- If `@` is configured to point to `src`, then `@/auth` resolves to `src/auth`.
+
+This makes imports cleaner and avoids issues with relative paths like:
+
+javascript
+
+Copy code
+
+`import { handlers } from "../../../../auth";`
+
+### 2. **Improved Readability**
+
+Aliases make the code more readable, especially in large projects with deeply nested directories. By using `@`, it becomes clear that the import is from a higher-level module rather than a deeply nested sibling.
+
+### 3. **Easier Refactoring**
+
+If the directory structure changes, updating the alias in the configuration file updates all imports that use the alias, rather than modifying each relative import manually.
+
+### 4. **Framework-Specific Behavior**
+
+In some frameworks like Next.js, `@` might be predefined or commonly used for imports from the root or `src` directory.
+
+---
+
+### How It Works
+
+If you are using Webpack, Vite, or a similar bundler, the alias is configured like this:
+
+**Webpack Example (in `webpack.config.js`):**
+
+javascript
+
+Copy code
+
+``resolve: {   alias: {     "@": path.resolve(__dirname, "src"), // `@` points to the `src` directory   }, },``
+
+**Vite Example (in `vite.config.js`):**
+
+javascript
+
+Copy code
+
+`import { defineConfig } from "vite"; import path from "path";  export default defineConfig({   resolve: {     alias: {       "@": path.resolve(__dirname, "src"),     },   }, });`
+
+**Next.js Example (in `jsconfig.json` or `tsconfig.json`):**
+
+json
+
+Copy code
+
+`{   "compilerOptions": {     "baseUrl": ".",     "paths": {       "@/*": ["src/*"]     }   } }`
+
+---
+
+If `@/auth` is not resolving correctly, ensure the alias is configured in your project setup as described above.
+
+
+
+### Working With forms:
+Rednering them on server side ?
+react 19 form and the way next js extend them the form is provided to have prefetching (load stuff like loading ui before the page is clicked), client side navigation meaning that the common layout is presented only the change on submission will be fetched, and progressive enhancement.
+[link](https://nextjs.org/docs/app/api-reference/components/link#prefetching-links-in-middleware)
+
+
+```ts
+import React from 'react'
+
+import Form from "next/form"
+
+const SearchForm = (): React.JSX.Element => {
+
+    const query = "Test"
+
+    const reset = () => {
+
+        const formCollection = document?.getElementsByClassName('search-form') as HTMLCollection;
+
+        const form = formCollection[0] as HTMLFormElement | undefined;
+
+        if (form) {
+
+            form.reset();
+
+        }
+
+    }
+
+    return (
+
+        <Form action="/" scroll={false} className='search-form'>
+
+            <input name="query" defaultValue={query} className='search-input' placeholder='Search Startups' />
+
+            <div className='flex gap-2'>
+
+                {query && (<button type="reset" onClick={reset}></button>)}
+
+            </div>
+
+  
+
+        </Form>
+
+    )
+
+}
+
+  
+
+export default SearchForm
+```
+The form is server side but the button and its handler are client side therefore we should move it to a separate container.
+
+
+Understand SSL encrytion, asset compression, cahce invalidation
+## Sanity:
+bro its not really useful to me just know thta it is a CMS
+And
+Integrating a cms with next 
+
+
+### Displaying Dates
+
+```ts
+  
+
+export function formatDate(date: string) {
+
+  return new Date(date).toLocaleDateString("en-US", {
+
+    month: "long",
+
+    day: "numeric",
+
+    year: "numeric",
+
+  });
+
+}
+```
+
+You cannot display object in DOM directly hence you should use this method for displaying. 
+
+
+
+
+
+### Setup Sanity
+
+
+### Fetch data from Sanity
+GRQQ language 
+![[Pasted image 20241121154417.png]]
+
+Straight forward
+* * means query all
+* [] is used to specifcy filter.
+
+Typescript types are generated through sanity 
+But first we must export the schema
+![[Pasted image 20241121155357.png]]
+
+
+![[Pasted image 20241121155449.png]]
+
+Typegen will generate the types at the specified location.
+
+After extractio nof schema from types we will get![[Pasted image 20241121160047.png]]
+
+![[Pasted image 20241121160056.png]]
+
+Then defined the typegen 
+
+![[Pasted image 20241121160121.png]]
+
+
+
+![[Pasted image 20241122004422.png]]
+
+Sanity type generation for schema and GRQL queries
+
+
+### Caching
+![[Pasted image 20241122005031.png]]
+
+![[Pasted image 20241122005209.png]]
+To always get new data set useCdn to false 2:47
+
+ISR incremental static regeneration after every minute sanity will requery the db to check for changes.  (revaliate the conetnt - author)
+
+
+false value will give latest value of the data on each refresh immedialtey
+
+To get data immediately when it is added :
+![[Pasted image 20241122023214.png]]
+
+Sanity specific
+abstracts real time functionality 
+
+
+![[Pasted image 20241122023237.png]]
+Runs a package on server only
+Automatic update with content is not really working.
+
+
+
+
+## Using Sanity For page view count
+![[Pasted image 20241122130708.png]]
+
+
+In next js unstable after is used to make non blocking request. 
+React escapes html to prevent XSS attacks
+
+
+
+#question public token one appended with NEXT_API vs the one without it.
