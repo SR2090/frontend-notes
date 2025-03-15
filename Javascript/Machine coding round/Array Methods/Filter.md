@@ -5,16 +5,9 @@ tags:
 ---
 [[Filter method]]
 
+The filter method returns a new array.
 The filter method iterates over the length of the array it gets from this.length property and executes callbackFn to obtain new shallow copied array which contains those element for which the call back returns true.
 Also, the callback function takes 3 argument array element, index, array. The thisArg is the object used to call the callback function.
-
-```js
-Array.prototype.myFilter = function(callBackFn, thisArg) {
-	const length 
-} 
-```
-
-
 
 ```js
 Array.prototype.myFilter = function (callbackFn, thisArg) {
@@ -36,6 +29,6 @@ Array.prototype.myFilter = function (callbackFn, thisArg) {
   }
 
   return result;
-
+  
 };
 ```

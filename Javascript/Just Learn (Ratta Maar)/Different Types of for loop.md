@@ -1,0 +1,5 @@
+---
+tags:
+  - justlearn
+  - for-loops
+---
