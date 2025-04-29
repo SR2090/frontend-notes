@@ -1,0 +1,2 @@
+- #tspattern => Means  a practice we should follow when using TypeScript.
+- #todots => ts topics that are not relevant immediately 

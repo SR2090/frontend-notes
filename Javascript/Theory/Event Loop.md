@@ -121,7 +121,6 @@ When you attach an event listener to a DOM element, the browser registers a call
 
 When performing asynchronous operations like fetching data, JavaScript leverages promises. Here’s how it works:
 
-  
 
 - **setTimeout Callbacks:** When you use a function like `setTimeout`, its callback is added to the regular callback queue after the specified delay.
 

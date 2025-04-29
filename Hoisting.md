@@ -196,3 +196,74 @@ ESLint is a static code analyzer that can find violations of such cases with the
 
 - [Hoisting | MDN](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 - [JavaScript Visualized: Hoisting](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
+
+
+
+## Flashcards
+
+### 1. What is hoisting in JavaScript?
+
+**Answer**: Hoisting is JavaScript’s behavior of moving variable and function declarations to the top of their containing scope during compilation. Although we describe it as “moving” code, in practice, the JavaScript engine makes these declarations known before execution begins.
+
+---
+
+### 2. How does hoisting affect variables declared with `var`?
+
+**Answer**: For `var`, the declaration is hoisted and initializes to `undefined` at the start of the scope. Accessing it before its actual assignment logs `undefined` (rather than throwing an error).
+
+---
+
+### 3. How are `let` and `const` variables hoisted differently from `var`?
+
+**Answer**: Although `let` and `const` are also hoisted, they remain uninitialized until the execution reaches their declaration. Attempting to access them beforehand results in a `ReferenceError` (the “temporal dead zone”).
+
+---
+
+### 4. How do function declarations (`function`) behave under hoisting?
+
+**Answer**: A function declared with the `function` keyword is fully hoisted: both the declaration and the function body. This means it can be called before its definition appears in the code.
+
+---
+
+### 5. How do function expressions (e.g., `var myFunc = function() {...}`) behave under hoisting?
+
+**Answer**: Only the variable declaration (`var myFunc`) is hoisted—initially set to `undefined`. The actual function expression is not hoisted. Calling `myFunc` before the assignment will result in `undefined` or an error if you try to invoke it as a function.
+
+---
+
+### 6. What happens if you try to use a class declaration before it’s defined?
+
+**Answer**: Classes are hoisted but not initialized. Accessing a class before its definition results in a `ReferenceError`, similar to `let` and `const`.
+
+---
+
+### 7. How are `import` statements hoisted?
+
+**Answer**: Import statements are hoisted to the top of the module. The imported bindings are available throughout the module, and any side effects from the import occur before the rest of the module’s code runs.
+
+---
+
+### 8. What is the “temporal dead zone”?
+
+**Answer**: The temporal dead zone (TDZ) is the period between the start of a variable’s scope and its actual declaration (for `let`, `const`, or `class`). During this time, accessing the variable will result in a `ReferenceError`.
+
+---
+
+### 9. What are modern practices regarding variable declarations in JavaScript?
+
+**Answer**: Modern JavaScript typically avoids `var` and instead uses `let` and `const`. It’s recommended to declare and initialize variables (and import statements) at the top of their scope/module to avoid confusion and potential errors related to hoisting.
+
+---
+
+### 10. Which ESLint rules help catch issues related to hoisting?
+
+**Answer**:
+
+1. **`no-use-before-define`** – warns if a variable or function is used before its declaration.
+    
+2. **`no-undef`** – warns if a variable is referenced but never declared.
+    
+
+---
+
+Feel free to adjust or refine these Q&A pairs further to match your preferred flashcard format.

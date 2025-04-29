@@ -7,7 +7,7 @@ title: Describe event capturing in JavaScript and browsers
 
 ## TL;DR
 
-Event capturing is a lesser-used counterpart to [event bubbling](/questions/quiz/describe-event-bubbling) in the DOM event propagation mechanism. It follows the opposite order, where an event triggers first on the ancestor element and then travels down to the target element.
+Event capturing is a lesser-used counterpart to [event bubbling](Event%20Bubbling.md) in the DOM event propagation mechanism. It follows the opposite order, where an event triggers first on the ancestor element and then travels down to the target element.
 
 Event capturing is rarely used as compared to event bubbling, but it can be used in specific scenarios where you need to intercept events at a higher level before they reach the target element. It is disabled by default but can be enabled through an option on `addEventListener()`.
 

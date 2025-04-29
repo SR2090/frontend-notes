@@ -26,14 +26,14 @@ The **Virtual DOM (VDOM)** is a concept used in modern JavaScript frameworks lik
 
 ### **Difference Between Virtual DOM and Real DOM**
 
-|**Aspect**|**Virtual DOM**|**Real DOM**|
-|---|---|---|
-|**Definition**|A lightweight JavaScript object that represents the DOM structure virtually.|The actual Document Object Model rendered in the browser.|
-|**Update Mechanism**|Updates are made in memory first, and only the differences are applied to the real DOM.|Updates involve directly manipulating the DOM, which can be slow.|
-|**Performance**|Fast, as it minimizes expensive real DOM operations and performs updates in batches.|Slower, as every change causes re-rendering and layout recalculations in the browser.|
-|**Re-rendering**|Uses **diffing** to identify and update only the changed parts of the DOM.|Re-renders the entire affected part of the DOM, which can be computationally intensive.|
-|**Abstraction**|An abstraction layer over the real DOM, making it easier to work with components and state changes.|Directly interacts with the browser’s DOM API.|
-|**Usage**|Typically used in frameworks like React to optimize UI updates.|Default in vanilla JavaScript, HTML, or traditional DOM manipulation libraries like jQuery.|
+| **Aspect**           | **Virtual DOM**                                                                                     | **Real DOM**                                                                                |
+| -------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Definition**       | A lightweight JavaScript object that represents the DOM structure virtually.                        | The actual Document Object Model rendered in the browser.                                   |
+| **Update Mechanism** | Updates are made in memory first, and only the differences are applied to the real DOM.             | Updates involve directly manipulating the DOM, which can be slow.                           |
+| **Performance**      | Fast, as it minimizes expensive real DOM operations and performs updates in batches.                | Slower, as every change causes re-rendering and layout recalculations in the browser.       |
+| **Re-rendering**     | Uses **diffing** to identify and update only the changed parts of the DOM.                          | Re-renders the entire affected part of the DOM, which can be computationally intensive.     |
+| **Abstraction**      | An abstraction layer over the real DOM, making it easier to work with components and state changes. | Directly interacts with the browser’s DOM API.                                              |
+| **Usage**            | Typically used in frameworks like React to optimize UI updates.                                     | Default in vanilla JavaScript, HTML, or traditional DOM manipulation libraries like jQuery. |
 
 ---
 

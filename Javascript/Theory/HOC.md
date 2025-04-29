@@ -192,6 +192,33 @@ const maxValue = _.max(numbers); // 5
 const sum = _.sum(numbers); // 15
 ```
 
+
+
+### HOC In react
+A logging compoennt
+```jsx
+const HOC = (WrappedComponent) => {
+
+  return (props) => {
+
+    console.log(props)
+
+    return <WrappedComponent {...props} />
+
+  }
+
+}
+```
+
+
+```js
+const EnhancedTarget = HOC(TargetComponent);
+// Then in your render method or component:
+<EnhancedTarget prop1={val1} />
+
+```
+
+Usage of this component
 ## Further reading
 
 - [Higher-Order Functions](https://eloquentjavascript.net/05_higher_order.html)

@@ -1,0 +1,1 @@
+Can make properties readOnly, optional or not optional if in their parent object they are optional.

@@ -32,3 +32,42 @@ Array.prototype.myFilter = function (callbackFn, thisArg) {
   
 };
 ```
+
+
+```js
+const users = [
+  {
+    id: 1,
+    name: 'Alice',
+    age: 28,
+    address: {
+      city: 'New York',
+      zip: '10001'
+    },
+    hobbies: ['reading', 'cycling']
+  },
+  {
+    id: 2,
+    name: 'Bob',
+    age: 34,
+    address: {
+      city: 'Los Angeles',
+      zip: '90001'
+    },
+    hobbies: ['hiking', 'chess']
+  },
+  {
+    id: 3,
+    name: 'Charlie',
+    age: 22,
+    address: {
+      city: 'Chicago',
+      zip: '60601'
+    },
+    hobbies: ['gaming', 'music']
+  }
+];
+
+const result = users.filter(({hobbies}) => hobbies.includes("chess"));
+console.log(result);
+```

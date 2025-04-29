@@ -1,39 +1,141 @@
-[[Different Ways of creating object]]
-[[Constructors]]
 
-[[Javascript/this keyword|this keyword]]
+## 1. Fundamentals & Data Types
 
-[[Closures]]
-[[Event Loop]]
-[[HOC]]
-[[Strict Equality vs Loose Equality]]
+- [[Primitives vs Reference types]] (Foundational)
+    
+- [[Important JS features]] (Interview favorite)
+    
 
+## 2. Operators & Comparisons
 
+- [[Strict Equality vs Loose Equality]] (Frequently asked)
+    
+- [[Type coercion based questions]] (High)
+    
 
-Arrays
-[[Array Methods]]
-[[Array Pollyfills]]
-[[Array to object]]
-[[Array Push Events]]
+## 3. Functions & Scope
 
-Functions
-[[Currying]]
+- [[Arrow Vs Normal Function]] (Core)
+    
+- [[Currying]] (Often covered)
+    
+- [[Lexical Scope]] (Fundamental)
+    
+- [[Closures]] (Essential)
+    
+- [[use case of closure]] (Applied)
+    
+- [[Javascript/this keyword|this keyword]] (Critical)
+    
+- [[this keyword output based]] (Tested)
+    
 
-Objects
-[[Various Ways of creating objects in javascript]]
+## 4. Objects & Prototypes
 
-Redux
+- [[Different Ways of creating object]] (Core)
+    
+- [[Various Ways of creating objects in javascript]] (Core)
+    
+- [[Constructors]] (Key)
+    
+- [[Valid Key types]] (Detail)
+    
+- [[Function Theory]] (Conceptual)
+    
+- [[Prototype]] (Essential)
+    
+- [[Inheritance]] (Core)
+    
+- [[Method Chaining class method]] (Advanced)
+    
+- [[Decorators]] (Advanced)
+    
 
+## 5. Arrays & Collections
 
+- [[Array Methods]] (Essential)
+    
+- [[Array Pollyfills]] (In-depth)
+    
+- [[Array to object]] (Common)
+    
+- [[Array Push Events]] (Edge-case)
+    
+- Learn Array methods from here – [https://doesitmutate.xyz/](https://doesitmutate.xyz/) (Resource)
+    
 
-Important Concepts
-[[Promise VS Callback]]
-## Output
-[[Simple Output Based qes]]
-[[Tricky Output Based Questions 1]]
-[[Output Based OOPS]]
-[[Resources OutputBasedQuestions]]
+## 6. Asynchronous JavaScript & Timing
 
-[[Output Question Source]]
-## Conversion 
-[[Array to object]]
+- [[Promises]] (Core)
+    
+- [[Promise VS Callback]] (Essential)
+    
+- [[Javascript/Theory/Event Loop]] (Crucial)
+    
+- [[clearAllTimeout]] (Utility)
+    
+- [[Throttling vs Debouncing]] (Performance)
+    
+- [[Debouncing]] (High)
+    
+- [[Throttling]] (High)
+    
+
+## 7. Web Performance & Rendering
+
+- [[Simplest webpage rendering]] (Foundational)
+    
+- [[Wepage Rendering ]] (Basic)
+    
+- [[CSR In action]] (Key)
+    
+- [[MPA vs SPA]] (Comparison)
+    
+- [[SSR]] (Essential)
+    
+- [[TBT]] (Performance)
+    
+- [[How different metric fit together]] (Advanced)
+    
+- [[Understanding customer to base performance metric]] (Deep-dive)
+    
+
+## 8. Memory & Storage
+
+- [[Understanding memory]] (Low-level)
+    
+- [[Browser storage comparision]] (Architectural)
+    
+
+## 9. Patterns & Tools
+
+- [[HOC]] (React pattern)
+    
+- [[Web Crawlers]] (Conceptual)
+    
+- [[Build time vs Run Time]] (Consideration)
+    
+
+## 10. Interview Practice & Output Questions
+
+- [[Simple Output Based qes]] (Practice)
+    
+- [[Tricky Output Based Questions 1]] (Practice)
+    
+- [[Output Based OOPS]] (Practice)
+    
+- [[Resources OutputBasedQuestions]] (Resource)
+    
+- [[Output Question Source]] (Resource)
+    
+- [[Equality based output questions]] (Practice)
+    
+- [[Flatten Array]] (Common)
+    
+- [[generate classNames]] (Utility)
+    
+
+## 11. Revision Index
+
+- [[00--JS-RattaMaar-Index]] (Comprehensive review)
+    

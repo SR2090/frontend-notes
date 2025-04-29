@@ -57,3 +57,14 @@ console.log(obj1.toString); // Output: function toString() { [native code] }
 const obj2 = new Object();
 console.log(obj2.toString); // Output: function toString() { [native code] }
 Since Object.create(null) doesn't inherit from Object.prototype, it's often used when you want to create a truly "plain" object, such as for use as a dictionary/map where prototype properties like toString or hasOwnProperty might interfere with your data.
+
+
+
+## Flashcards
+
+### 1. What is Object.create?
+
+**Answer**: This method allows you to create a new object using an existing object as a prototype. The new object inherits properties and methods from the prototype object. It can be used when you need to create a new object with a specific prototype.
+
+### 1. What is Pure object?
+**Answer**: An object with a prototype can be created by doing `Object.create(null)`.Actually, an object created with Object.create(null) does not have a prototype. This means it doesn't inherit properties or methods from Object.prototype, making it a "pure" object with no inherited behavior.

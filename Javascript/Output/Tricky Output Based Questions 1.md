@@ -987,3 +987,19 @@ The `name` variable was declared with a `const` keyword, so its deletion is not 
 </details>
 
 ---
+
+```js
+const obj = {
+    name: "JavaScript",
+    greet: function() {
+        setTimeout(function() {
+            console.log(this.name); // 'this' refers to window, not obj
+        }, 1000);
+    }
+};
+
+obj.greet(); // Undefined in strict mode, or logs window.name (if set)
+```
+
+The this here inside the method will always be the global object. 
+
