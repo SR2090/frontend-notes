@@ -1,6 +1,6 @@
 Contact form with action and method defined
 
-action is where the form data is submitted while the method determines the http used to submit the form data.
+Action is where the form data is submitted while the method determines the http used to submit the form data.
 Question:
 Building forms is a common task in Front End. In this exercise, we will build a basic "Contact Us" form, commonly seen on marketing websites for visitors to ask questions or provide feedback.
 
@@ -13,12 +13,13 @@ Building forms is a common task in Front End. In this exercise, we will build a 
     - Submit button
         - Contains the text "Send".
         - Clicking on the submit button submits the form.
+    - Drop down as well
 - The form and submission should be implemented entirely in HTML. Do not use any JavaScript or framework-specific features for this question.
 - There is no need to do any client-side validation on the fields. Validation will be done on the server side.
 
 ## Submission API
 
-Upon submission, `POST` the form data to `https://www.greatfrontend.com/api/questions/contact-form` with the following fields in the **request body**: `name`, `email`, `message`.
+Upon submission, `POST` the form data to `https://www.greatfrontend.com/api/questions/contact-form` with the following fields in the **request body**: `name`, `email`, `message`, options.
 
 If all the form fields are correctly filled up, you will see an alert containing a success message. Congratulations!
 
@@ -36,47 +37,47 @@ export default function App() {
   return (
 
     <form
+  onSubmit={submitForm}
+  method="post"
+  action="https://www.greatfrontend.com/api/questions/contact-form"
+>
+  <div>
+    <label htmlFor="name">Enter your Name: </label>
+    <input type="text" name="name" id="name" />
+  </div>
 
-      // Ignore the onSubmit prop, it's used by GFE to
+  <div>
+    <label htmlFor="email">Enter your Email: </label>
+    <input type="email" name="email" id="email" />
+  </div>
 
-      // intercept the form submit event to check your solution.
+  <div>
+    <label htmlFor="message">Message: </label>
+    <textarea name="message" id="message" rows="4" cols="40"></textarea>
+  </div>
 
-      onSubmit={submitForm} method="post" action='https://www.greatfrontend.com/api/questions/contact-form'>
+  <div>
+    <label htmlFor="options">Select an Option: </label>
+    <select name="option" id="options">
+      <option value="">-- Choose --</option>
+      <option value="feedback">Feedback</option>
+      <option value="support">Support</option>
+      <option value="inquiry">Inquiry</option>
+    </select>
+  </div>
 
-  
+  <button type="submit">Send</button>
+</form>
 
-      <div>
-
-        <label for="name"> Enter your Name:  </label>
-
-        <input type="text" name="name" />
-
-      </div>
-
-      <div>
-
-        <label for="email"> Enter your Email:  </label>
-
-        <input type="email" name="email" />
-
-      </div>
-
-      <div>
-
-        <label for="message"> Text Area  </label>
-
-        <textarea name="message" name="message" rows="4" cols="40" />
-
-      </div>
-
-      <button>Send</button>
-
-    </form>
 
   );
 
 }
 ```
+
+
+![[Pasted image 20250502121357.png]]
+
 
 ```js
 const SUBMIT_URL =
@@ -128,14 +129,12 @@ export default async function submitForm(event) {
       },
 
       body: JSON.stringify({
-
-        name: formData.get('name'),
-
-        email: formData.get('email'),
-
-        message: formData.get('message'),
-
-      }),
+  name: formData.get('name'),
+  email: formData.get('email'),
+  message: formData.get('message'),
+  option: formData.get('option'),         // for single select
+  options: formData.getAll('options'),    // for multi-select
+}),
 
     });
 

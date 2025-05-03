@@ -1,0 +1,1 @@
+We can be more granular when it comes to streaming 

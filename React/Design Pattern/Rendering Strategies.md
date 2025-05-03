@@ -209,4 +209,8 @@ export default function Trending({ data }) {
     – ISR lets you avoid full rebuilds by re-generating only stale pages.
     
 
-Feel free to let me know if you’d like code samples for a specific framework or deeper dive on cache strategies!
+
+
+### Extras
+[Cumulative Layout Shift](https://vercel.com/blog/how-core-web-vitals-affect-seo)
+9

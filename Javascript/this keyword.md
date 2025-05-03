@@ -2,9 +2,7 @@
 title: Explain how `this` works in JavaScript
 ---
 
-## TL;DR
-
-There's no simple explanation for `this`; it is one of the most confusing concepts in JavaScript because it's behavior differs from many other programming languages. The one-liner explanation of the `this` keyword is that it is a dynamic reference to the context in which a function is executed.
+The one-liner explanation of the `this` keyword is that it is a dynamic reference to the context in which a function is executed.
 
 A longer explanation follows is that `this` follows these rules:
 
@@ -22,7 +20,7 @@ For an in-depth explanation, do check out [Arnav Aggrawal's article on Medium](h
 
 ## `this` keyword
 
-In JavaScript, `this` is a keyword that refers to the current execution context of a function or script. It's a fundamental concept in JavaScript, and understanding how `this` works is crucial for building robust and maintainable applications.
+In JavaScript, `this` is a keyword that refers to the **current execution context of a function or script**. It's a fundamental concept in JavaScript, and understanding how `this` works is crucial for building robust and maintainable applications.
 
 ### Used globally
 
