@@ -1,3 +1,3 @@
-[[Decorators in Javascript]]
+[[Decorators in JavaScript]]
 [[Types of decorators]]
 [[Example Decorators]]

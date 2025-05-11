@@ -8,6 +8,10 @@ JSX (**JavaScript XML**) is a syntax extension for JavaScript that lets you writ
 
 `const element = React.createElement("h1", {}, "Hello, world!");`
 
+![[Pasted image 20250508120145.png]]
+
+![[Pasted image 20250508120150.png]]
+![[Pasted image 20250508120208.png]]
 #### **With JSX**
 
 

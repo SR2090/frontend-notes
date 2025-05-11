@@ -13,12 +13,10 @@ The **Virtual DOM (VDOM)** is a concept used in modern JavaScript frameworks lik
     
     - A **Virtual DOM** is an in-memory representation of the real DOM. It's a lightweight JavaScript object that mirrors the structure of the actual DOM.
 2. **How it works**:
-    
     - When a component’s state or props change, a new Virtual DOM is created.
     - React compares the new Virtual DOM with the previous Virtual DOM using a process called **reconciliation**.
     - After identifying the differences, React updates only the necessary parts of the real DOM (not the entire DOM) using **efficient batch updates**.
 3. **Purpose**:
-    
     - Minimize direct manipulation of the real DOM, which is slow and expensive.
     - Improve the performance of web applications by reducing unnecessary DOM operations.
 
@@ -101,17 +99,13 @@ When you save or update something in the **Virtual DOM**, it goes through a proc
 React achieves this with these mechanisms:
 
 4. **Diffing Algorithm**:
-    
     - React compares the old and new Virtual DOM trees **node by node** to find differences.
     - If a node hasn’t changed, React skips it. This avoids re-rendering unchanged parts of the UI.
 5. **Keys for Lists**:
-    
     - React uses **keys** (unique identifiers for list items) to optimize updates in lists. When a list changes, React uses keys to figure out which items were added, removed, or moved.
 6. **Fiber Architecture**:
-    
     - React’s **Fiber architecture** enables it to break down updates into small chunks, prioritizing important updates (e.g., animations) and deferring less urgent ones.
 7. **React’s Lifecycle Methods/Hooks**:
-    
     - React provides lifecycle methods (e.g., `shouldComponentUpdate`) and hooks (e.g., `React.memo`, `useMemo`, `useCallback`) to prevent unnecessary re-renders. For example:
         - A component re-renders only when its state or props change.
         - You can explicitly control rendering behavior.

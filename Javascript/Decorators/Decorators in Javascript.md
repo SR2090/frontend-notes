@@ -1,10 +1,12 @@
 Meta programming feature => It means that this is some piece of code that will interact with other code to alter its behavior. 
+
 ![[Pasted image 20250419212934.png]]
 Example decorator Length is used to add validation logic to that title value.
-
 There are 2 types of decorators:
 1. built in decorators
-2. experimental decorators.![[Pasted image 20250419213343.png]]
+2. experimental decorators.
+
+ ![[Pasted image 20250419213343.png]]
 ### Types of decorators
 The different types are ![[Pasted image 20250419213505.png]]
 

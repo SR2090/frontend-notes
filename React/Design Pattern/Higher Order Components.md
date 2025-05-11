@@ -163,5 +163,3 @@ export default ProtectedDashboard;
     };
     ```
     
-
-Let me know if you'd like more examples or further clarification! 😊

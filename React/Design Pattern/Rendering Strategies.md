@@ -88,8 +88,6 @@ export default function Profile() {
 
 ## 3. Static Site Generation (SSG / “ISG”)
 
-> **Note:** Some docs abbreviate _Incremental Static Generation_ as ISG, but the core idea is build-time generation of HTML.
-
 **What it is**  
 All pages are rendered to HTML at build time. The HTML (and JSON data) is deployed to a CDN, so serving is lightning-fast.
 
@@ -183,12 +181,12 @@ export default function Trending({ data }) {
 
 ## Quick Comparison
 
-|Strategy|When HTML Generated|Freshness|SEO|Perf (TTFB)|Typical Use Case|
-|---|---|---|---|---|---|
-|**SSR**|On each request|Always fresh|✅|Medium–High|Dashboards, user-specific pages|
-|**CSR**|On client (JS runtime)|Depends on client|⚠️|High (slow FCP)|SPAs, apps behind auth|
-|**SSG**|Build time|Frozen until build|✅|Very Low|Blogs, docs, landing pages|
-|**ISR**|Build time + on interval|Near-fresh|✅|Very Low|Catalogs, changing content w/o rebuild|
+| Strategy | When HTML Generated      | Freshness          | SEO | Perf (TTFB)     | Typical Use Case                       |
+| -------- | ------------------------ | ------------------ | --- | --------------- | -------------------------------------- |
+| **SSR**  | On each request          | Always fresh       | ✅   | Medium–High     | Dashboards, user-specific pages        |
+| **CSR**  | On client (JS runtime)   | Depends on client  | ⚠️  | High (slow FCP) | SPAs, apps behind auth                 |
+| **SSG**  | Build time               | Frozen until build | ✅   | Very Low        | Blogs, docs, landing pages             |
+| **ISR**  | Build time + on interval | Near-fresh         | ✅   | Very Low        | Catalogs, changing content w/o rebuild |
 
 ---
 
@@ -213,4 +211,4 @@ export default function Trending({ data }) {
 
 ### Extras
 [Cumulative Layout Shift](https://vercel.com/blog/how-core-web-vitals-affect-seo)
-9
+

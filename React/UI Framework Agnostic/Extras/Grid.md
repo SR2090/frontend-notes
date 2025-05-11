@@ -20,7 +20,7 @@ Grid Overflowing because the gap + the width is exceeding the parent width.
 
 The FR unit represents the fraction of space left in the grid container
 ![[Pasted image 20241207234206.png]]
-When using this fr I will not have an overflow because the browser will take the gap into consideration and this fr unit into consideration to calculate the container width in a way that it does not exceed the width of its parent
+When using this fr. It will not have an overflow because the browser will use the gap and fr unit to calculate the parent container width as a result of which it will not exceed the width of its parent
 
 
 ![[Pasted image 20241207235155.png]]

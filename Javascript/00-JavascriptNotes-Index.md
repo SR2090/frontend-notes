@@ -57,7 +57,7 @@
     
 - [[Array Pollyfills]] (In-depth)
     
-- [[Array to object]] (Common)
+- [[Convert Array to Object]] (Common)
     
 - [[Array Push Events]] (Edge-case)
     

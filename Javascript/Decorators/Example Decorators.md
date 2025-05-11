@@ -114,4 +114,4 @@ class_1 represent anonymous class name that has been assigned by the JS engine
 
 
 ## Function Decorator example
-[[Decorators in Javascript#^functiondecoratorexample | Function decorator example to implement autobind]]
+[[Decorators in JavaScript#^functiondecoratorexample| Function decorator example to implement autobind]]

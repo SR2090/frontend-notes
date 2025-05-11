@@ -3,14 +3,14 @@
 
 ![[Pasted image 20241207230659.png]]
 
-Flex grow mines how much free space should be used to place the items.
+Flex grow determines how much free space should be used to place the items.
 This is useful if the parent container is bigger than the total width of the child container. No free space then nothing to divide
 
 Distribution of the free space that is specified in the first done on the basis of Flex grow value.
 
 ![[Pasted image 20241207231042.png]]
 
-Because the flex crew is set to one the components original width of 170 has been overwritten by the browser and is set to 110 which will allow the free space to be equally divided between the elements.
+Because the flex grow is set to one the components original width of 170 has been overwritten by the browser and is set to 110 which will allow the free space to be equally divided between the elements.
 
 This is ideally useful in situation where we want to grow our elements at different rates from one another.
 
